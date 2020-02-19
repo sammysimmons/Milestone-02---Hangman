@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Open+Sans:300,700i&display=swap');
+
+/* mobile imagery*/
+
+@media (max-width:576px) {
+    .background {
+        height: 900px;
+        width: 100%;
+        background: url("..images/landing-background.jpg");
+        background-size: cover;
+    }
+}
