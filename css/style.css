@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer|Open+Sans:300,700i&display=swap');
 
+/*buttons*/
+
+.playbtn {
+    border: none;
+    background-color: greenyellow;
+    padding: 22px 60px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 310px;
+    margin-left: 120px;
+    position: fixed;
+}
+
+.playbtn:hover {
+    background-color: ghostwhite;
+}
+
+
 /* mobile imagery*/
 
 @media (max-width:576px) {
