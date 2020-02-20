@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer|Open+Sans:300,700i&display=swap');
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/*text*/
+
 
 /*buttons*/
 
 .playbtn {
-    border: none;
-    background-color: greenyellow;
-    padding: 22px 60px;
-    font-size: 18px;
+    margin-left: 700px;
+    margin-top: 30%;
+    background-color: rgb(255, 255, 6);
+    padding: 20px 80px;
+    font-size: 22px;
     display: inline-block;
-    margin-top: 310px;
-    margin-left: 120px;
-    position: fixed;
 }
 
 .playbtn:hover {
@@ -18,16 +27,35 @@
 }
 
 
-/* mobile imagery*/
+/*imagery*/
 
-@media (max-width:576px) {
+.background {
+    height: 900px;
+    width: 100%;
+    background: url("../images/landing-background-desktop.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* mobile styling*/
+
+@media (max-width:768px) {
     .background {
-        height: 800px;
-        width: 100%;
+        height: 100%;
+        overflow: hidden;
         background: url("../images/landing-background-01.jpg") no-repeat center center;
         background-size: cover;
-        background-position-x: top;
-        padding: 0px;
         background-attachment: fixed;
+    }
+    .playbtn {
+        border: none;
+        text-align: center;
+        background-color: greenyellow;
+        padding: 20px 60px;
+        font-size: 18px;
+        display: inline-block;
+        margin-top: 310px;
+        margin-left: 115px;
     }
 }
