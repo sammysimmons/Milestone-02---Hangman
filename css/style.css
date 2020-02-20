@@ -10,12 +10,27 @@ html {
 
 /*text*/
 
+.game-intro {
+    color: ivory;
+    text-align: center;
+    margin-top: 450px;
+    font-family: Lacquer;
+    font-size: 46px;
+}
+
+.instructions {
+    margin-top: 0px;
+    text-align: center;
+    color: ivory;
+    font-family: OpenSans;
+    font-size: 18px;
+}
+
 
 /*buttons*/
 
 .playbtn {
-    margin-left: 700px;
-    margin-top: 30%;
+    margin-left: 720px;
     background-color: rgb(255, 255, 6);
     padding: 20px 80px;
     font-size: 22px;
@@ -40,6 +55,9 @@ html {
 
 /* mobile styling*/
 
+
+/* landing page*/
+
 @media (max-width:768px) {
     .background {
         height: 100%;
@@ -48,14 +66,28 @@ html {
         background-size: cover;
         background-attachment: fixed;
     }
+    .game-intro {
+        color: ivory;
+        text-align: center;
+        margin-top: 300px;
+        font-family: Lacquer;
+        font-size: 26px;
+    }
+    .instructions {
+        margin-top: 0px;
+        text-align: center;
+        color: ivory;
+        font-family: OpenSans;
+        font-size: 18px;
+    }
     .playbtn {
         border: none;
         text-align: center;
         background-color: greenyellow;
         padding: 20px 60px;
-        font-size: 18px;
+        font-size: 22px;
         display: inline-block;
-        margin-top: 310px;
         margin-left: 115px;
+        margin-top: 0em;
     }
 }
