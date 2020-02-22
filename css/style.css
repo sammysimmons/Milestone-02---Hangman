@@ -10,6 +10,10 @@ html {
 
 /*hangman*/
 
+.manhanging {
+    display: none;
+}
+
 line {
     stroke: ivory;
     stroke-width: 4;
@@ -19,9 +23,49 @@ line {
 
 /*text*/
 
+#word {
+    font-family: OpenSans;
+    position: absolute;
+    color: ivory;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    align-items: center;
+    letter-spacing: 30px;
+    height: 80px;
+}
+
+.letters {
+    border-bottom: 2px solid rgb(11, 227, 0);
+    display: inline-flex;
+    width: 30px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.livesleft {
+    color: ivory;
+    position: absolute;
+    top: 160px;
+    right: 20px;
+}
+
+.newGame {
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    color: ivory;
+}
+
 .game-intro {
     color: ivory;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 480px;
     font-family: Lacquer;
     font-size: 46px;
@@ -29,6 +73,7 @@ line {
 
 .instructions {
     margin-top: 0px;
+    flex-direction: column;
     text-align: center;
     color: ivory;
     font-family: OpenSans;
@@ -37,6 +82,7 @@ line {
 
 .game-welcome {
     color: ivory;
+    flex-direction: column;
     text-align: center;
     margin-top: 50px;
     font-family: Lacquer;
@@ -44,10 +90,45 @@ line {
 }
 
 
+/*pop-up*/
+
+#newGame {
+    display: none;
+    width: 60%;
+}
+
+.newGame {
+    font-family: Lacquer;
+    font-size: 16px;
+    background-color: rgb(93, 0, 174, 0.6);
+    align-content: center;
+    margin-top: -200px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+#newGamebtn {
+    font-family: OpenSans;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+
 /*buttons*/
 
+.alphabet-container {
+    background-color: ivory;
+    width 15px;
+    margin-left: 5px;
+    button:disabled {
+        background-color: white;
+        color: rgb(255, 255, 6);
+    }
+}
+
 .playbtn {
-    margin-left: 720px;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(255, 255, 6);
     padding: 20px 80px;
     font-size: 22px;
