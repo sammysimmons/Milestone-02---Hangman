@@ -19,27 +19,23 @@
     }
     /*text*/
     
-    #word {
-        font-family: OpenSans;
-        position: absolute;
-        color: ivory;
-        top: 420px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 32px;
-        align-items: center;
-        letter-spacing: 30px;
-        height: 80px;
+    .letters {
+        border-bottom: 4px solid rgb(11, 227, 0);
+        width: 20px;
+        float: left;
+        margin-left: 6px;
     }
     
-    .letters {
-        border-bottom: 2px solid rgb(11, 227, 0);
-        display: inline-flex;
-        width: 30px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-        display: none;
+    #word {
+        position: absolute;
+        color: ivory;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: OpenSans;
+        font-size: 32px;
+        height: 40px;
+        top: 400px;
+        letter-spacing: 10px;
     }
     
     .livesleft {
@@ -119,7 +115,7 @@
         margin: 5px;
         display: inline-block;
         background-color: ivory;
-        font-size: 22px;
+        font-size: 18px;
     }
     
     .playbtn {
@@ -144,7 +140,6 @@
         overflow: hidden;
     }
     /* mobile styling*/
-    /* landing page*/
     
     @media (max-width: 768px) {
         .background {
