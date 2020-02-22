@@ -6,17 +6,42 @@ const Hangmanlegs = document.getElementById("legs");
 const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
-const wrongLetters = document.getElementById("letters");
+const wrongLettersEl = document.getElementById("letters");
 const aplhabet = document.getElementById("alphabetbuttons");
 
 
 
 
 // array of chosen words
-const words = ["programmer", "HTML", "CSS", "Array", "Javascript", ];
+const words = ["JAVASCRIPT", "PROGRAM", "FRONT-END", "DEVELOPER", "ARRAY", "JAVASCRIPT", "INTERFACE", ];
 
 let selectedword = words[Math.floor(Math.random() * words.length)];
 console.log(selectedword);
+
+//correct letters array
+const correctLetters = ["J", "A", "V", "S", "C", "R", "P", "T", "I"];
+
+//wrong letter array
+const wrongLetters = [];
+
+//display hidden word
+function displaywords() {
+    wordsEl.innerHTML = `
+    ${selectedword
+        .split('')
+        .map(
+            letter=> ` 
+             <div class="letters">
+        ${correctLetters.includes(letter) ? letter : ''}
+</div>
+`
+)
+.join('')}
+`;
+}
+
+displaywords();
+
 
 
 
