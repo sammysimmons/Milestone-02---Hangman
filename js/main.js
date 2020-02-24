@@ -26,16 +26,11 @@ const wrongLetters = [];
 
 //display hidden word
 function displaywords() {
-    wordsEl.innerHTML = `
-    ${selectedword
-        .split('')
-        .map(
-            letter=> ` 
+    wordsEl.innerHTML = `${selectedword
+        .split('').map(letter=> ` 
              <div class="letters">
         ${correctLetters.includes(letter) ? letter : ''}
-</div>
-`
-)
+</div>`)
 .join('')}
 `;
 }
@@ -44,8 +39,29 @@ displaywords();
 
 
 
+//aphabet letter buttons
+var alphabetbuttons = [ $("#a"), $("#b"), $("#c"), $("#d"), $("#e"), $("#f"), $("#g"), $("#h"), $("#i"), $("#j"), $("#k"), $("#l"), $("#m"), $("#n"), $("#o"), $("#o"), $("#p"), $("#q"), $("#r"), $("#s"), $("#t"), $("#u"), $("#v"), $("#w"), $("#x"), $("#y"), $("#z") ];
+
+aplhabet.onclick = function(){
+this.className = "alphabet";
+this.onclick =null;
+for (var i = 0; i < wordsEl.length; i++) {
+    if (selectedword.includes(letter)){
+        if(!correctLetters.includes(letters)){
+            correctLetters.push(letters);
+            displaywords();
+        }
+    }
+
+      } else { if(wrongLetters.includes(letters)){
+    showLives.innerHTML = "You have" + showLives + "showLives";
+      if (showLives < 1) {
+        showLives.innerHTML = "NewGame";}
+      }
+    }
+}
 
 
 
-//const alphabetbuttons = [$("#a"), $("#b"), $("#c"), $("#d"), $("#e"), $("#f"), $("#g"), $("#h"), $("#i"), $("#j"), $("#k"), $("#l"), $("#m"), $("#n"), $("#o"), $("#o"), $("#p"), $("#q"), $("#r"), $("#s"), $("#t"), $("#u"), $("#v"), $("#w"), $("#x"), $("#y"), $("#z")];
+
 //const HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];
