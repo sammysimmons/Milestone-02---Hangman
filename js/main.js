@@ -7,7 +7,7 @@ const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
-const aplhabet = document.getElementById("alphabetbuttons");
+var aplhabet = document.getElementById("alphabetbuttons");
 
 
 
@@ -40,28 +40,25 @@ displaywords();
 
 
 //aphabet letter buttons
-var alphabetbuttons = [ $("#a"), $("#b"), $("#c"), $("#d"), $("#e"), $("#f"), $("#g"), $("#h"), $("#i"), $("#j"), $("#k"), $("#l"), $("#m"), $("#n"), $("#o"), $("#o"), $("#p"), $("#q"), $("#r"), $("#s"), $("#t"), $("#u"), $("#v"), $("#w"), $("#x"), $("#y"), $("#z") ];
+const alphabetbuttons = [ $("#a"), $("#b"), $("#c"), $("#d"), $("#e"), $("#f"), $("#g"), $("#h"), $("#i"), $("#j"), $("#k"), $("#l"), $("#m"), $("#n"), $("#o"), $("#o"), $("#p"), $("#q"), $("#r"), $("#s"), $("#t"), $("#u"), $("#v"), $("#w"), $("#x"), $("#y"), $("#z") ];
 
+//aphabet on click function
 aplhabet.onclick = function(){
-this.className = "alphabet";
-this.onclick =null;
+    this.id = "alphabetbuttons";
+this.onclick = null;
 for (var i = 0; i < wordsEl.length; i++) {
     if (selectedword.includes(letter)){
         if(!correctLetters.includes(letters)){
             correctLetters.push(letters);
+           
             displaywords();
         }
     }
-
-      } else { if(wrongLetters.includes(letters)){
-    showLives.innerHTML = "You have" + showLives + "showLives";
-      if (showLives < 1) {
-        showLives.innerHTML = "NewGame";}
       }
     }
-}
+   
 
 
 
 
-//const HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];
+var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];
