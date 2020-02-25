@@ -7,13 +7,13 @@ const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
-var aplhabet = document.getElementById("alphabetbuttons");
+const alphabetbuttons = document.querySelectorAll("#a,#b,#c,#d,#e,#f,#g,#h,#i,#j,#k,#l,#m,#n,#o,#p,#q,#r,#s,#t,#u,#v,#w,#x,#y,#z");
 
 
 
 
 // array of chosen words
-const words = ["JAVASCRIPT", "PROGRAM", "FRONT-END", "DEVELOPER", "ARRAY", "JAVASCRIPT", "INTERFACE", ];
+const words = ["JAVASCRIPT", "PROGRAM", "FRONT-END", "DEVELOPER", ];
 
 let selectedword = words[Math.floor(Math.random() * words.length)];
 console.log(selectedword);
@@ -33,6 +33,7 @@ function displaywords() {
 </div>`)
 .join('')}
 `;
+
 }
 
 displaywords();
@@ -40,25 +41,16 @@ displaywords();
 
 
 //aphabet letter buttons
-const alphabetbuttons = [ $("#a"), $("#b"), $("#c"), $("#d"), $("#e"), $("#f"), $("#g"), $("#h"), $("#i"), $("#j"), $("#k"), $("#l"), $("#m"), $("#n"), $("#o"), $("#o"), $("#p"), $("#q"), $("#r"), $("#s"), $("#t"), $("#u"), $("#v"), $("#w"), $("#x"), $("#y"), $("#z") ];
 
 //aphabet on click function
-aplhabet.onclick = function(){
-    this.id = "alphabetbuttons";
-this.onclick = null;
-for (var i = 0; i < wordsEl.length; i++) {
-    if (selectedword.includes(letter)){
-        if(!correctLetters.includes(letters)){
-            correctLetters.push(letters);
-           
-            displaywords();
-        }
-    }
-      }
-    }
-   
+alphabetbuttons.addEventListener('click', function() {
+    
+});
+console.log();
 
 
+
+    
 
 
 var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];

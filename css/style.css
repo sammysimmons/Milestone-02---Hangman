@@ -106,12 +106,12 @@
     }
     /*buttons*/
     
-    #alphabetbuttons {
+    .alphabetbuttons {
         text-align: center;
         align-items: center;
     }
     
-    #alphabetbuttons button {
+    .alphabetbuttons button {
         border: green;
         padding: 20 20 20 20px;
         margin: 5px;
