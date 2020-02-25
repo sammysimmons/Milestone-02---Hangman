@@ -7,7 +7,6 @@ const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
-const alphabetbuttons = document.querySelectorAll("#a,#b,#c,#d,#e,#f,#g,#h,#i,#j,#k,#l,#m,#n,#o,#p,#q,#r,#s,#t,#u,#v,#w,#x,#y,#z");
 
 
 
@@ -43,14 +42,26 @@ displaywords();
 //aphabet letter buttons
 
 //aphabet on click function
-alphabetbuttons.addEventListener('click', function() {
+function generateButtons() {
+        let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+          `
+            <button
+              class="alphabetbuttons m-2"
+              id='` + letter + `'
+              onClick="Guess('` + letter + `')"
+            >
+              ` + letter + `
+            </button>
+          `).join('');
+      
+        document.getElementById('alphabtn').innerHTML = buttonsHTML;
+      }
+      
+
+generateButtons();
+
+
     
-});
-console.log();
 
 
-
-    
-
-
-var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];
+//var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
