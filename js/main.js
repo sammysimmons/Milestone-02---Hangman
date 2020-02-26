@@ -74,7 +74,7 @@ function Guess(chosenLetter) {
     correctLetters.includes(chosenLetter) === -1 ? correctLetters.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
-   
+   alert(selectedword);
     if (selectedword.indexOf(chosenLetter) >= 0) {
         displaywords();
     }
