@@ -7,7 +7,13 @@ const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 
+
 let showLives = 5;
+
+let correctanswer = '';
+
+
+
 
 
 // array of chosen words
@@ -25,13 +31,14 @@ const wrongLetters = [];
 //display hidden word
 function displaywords() {
     wordsEl.innerHTML = `${selectedword
-        .split('').map(letter=> ` 
+        .split('').map(letter => ` 
              <div class="letters">
         ${correctLetters.includes(letter) ? letter : '_'}
 </div>`)
+//no commas
 .join('')}
 `;
-document.getElementById("words").innerHTML = selectedword;
+//document.getElementById("words").innerHTML = selectedword;
 }
 
 displaywords();
@@ -61,6 +68,17 @@ generateButtons();
 
 
 document.getElementById(".livesleft");
+
+//chosen letter to appear
+function Guess(chosenLetter) {
+    correctLetters.includes(chosenLetter) === -1 ? correctLetters.push(chosenLetter) : null;
+    document.getElementById(chosenLetter).setAttribute('disabled', true);
+
+   
+    if (selectedword.indexOf(chosenLetter) >= 0) {
+        displaywords();
+    }
+}
 
 
 //var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
