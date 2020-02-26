@@ -71,14 +71,16 @@ document.getElementById(".livesleft");
 
 //chosen letter to appear
 function Guess(chosenLetter) {
-    correctLetters.includes(chosenLetter) === -1 ? correctLetters.push(chosenLetter) : null;
+    selectedword.includes(chosenLetter) === -1 ? selectedword.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
    alert(selectedword);
-    if (selectedword.indexOf(chosenLetter) >= 0) {
+    if (words.includes(correctLetters) >= 0) {
         displaywords();
     }
 }
+
+
 
 
 //var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
