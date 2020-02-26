@@ -10,7 +10,7 @@ const wrongLettersEl = document.getElementById("letters");
 
 let showLives = 5;
 
-let correctanswer = '';
+
 
 
 
@@ -46,10 +46,8 @@ displaywords();
 
 
 //aphabet letter buttons
-
-//aphabet on click function
 function generateButtons() {
-        let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+        let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXyYZ'.split('').map(letter =>
           `
             <button
               class="alphabetbuttons"
@@ -67,20 +65,23 @@ function generateButtons() {
 generateButtons();
 
 
-document.getElementById(".livesleft");
 
-//chosen letter to appear
+
+//aphabet chosen letter to appear on click
 function Guess(chosenLetter) {
     selectedword.includes(chosenLetter) === -1 ? selectedword.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
    alert(selectedword);
-    if (words.includes(correctLetters) >= 0) {
+    if (selectedword.includes(chosenLetter) >= 0) {
         displaywords();
     }
 }
 
 
+
+
+//document.getElementById(".livesleft");
 
 
 //var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
