@@ -1,4 +1,3 @@
-const showLives = document.getElementById(".livesleft");
 const Hangmanhead = document.getElementById("head");
 const Hangmanbody = document.getElementById("body");
 const Hangmanarms = document.getElementById("arms");
@@ -8,17 +7,17 @@ const newgamepop = document.getElementById("newGame");
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 
-
+let showLives = 5;
 
 
 // array of chosen words
-const words = ["JAVASCRIPT", "PROGRAM", "FRONT-END", "DEVELOPER", ];
+const words = ["JAVASCRIPT", "PROGRAM", "DEVELOPER", "DEVELOPER", "JSON", "RUBY", "PYTHON", ];
 
 let selectedword = words[Math.floor(Math.random() * words.length)];
 console.log(selectedword);
 
 //correct letters array
-const correctLetters = ["J", "A", "V", "S", "C", "R", "P", "T", "I"];
+const correctLetters = [];
 
 //wrong letter array
 const wrongLetters = [];
@@ -28,11 +27,11 @@ function displaywords() {
     wordsEl.innerHTML = `${selectedword
         .split('').map(letter=> ` 
              <div class="letters">
-        ${correctLetters.includes(letter) ? letter : ''}
+        ${correctLetters.includes(letter) ? letter : '_'}
 </div>`)
 .join('')}
 `;
-
+document.getElementById("words").innerHTML = selectedword;
 }
 
 displaywords();
@@ -46,7 +45,7 @@ function generateButtons() {
         let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
           `
             <button
-              class="alphabetbuttons m-2"
+              class="alphabetbuttons"
               id='` + letter + `'
               onClick="Guess('` + letter + `')"
             >
@@ -61,7 +60,7 @@ function generateButtons() {
 generateButtons();
 
 
-    
+document.getElementById(".livesleft");
 
 
 //var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
