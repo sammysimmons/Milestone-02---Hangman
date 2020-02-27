@@ -78,7 +78,6 @@ function Guess(chosenLetter) {
         console.log(bodyParts);
         console.log(HangmanParts);
 
-
     }
 
 }
