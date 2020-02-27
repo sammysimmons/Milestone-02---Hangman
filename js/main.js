@@ -23,10 +23,10 @@ let selectedword = words[Math.floor(Math.random() * words.length)];
 console.log(selectedword);
 
 //correct letters array
-const correctLetters = [];
+let correctLetters = [];
 
 //wrong letter array
-const wrongLetters = [];
+let wrongLetters = [];
 
 //display hidden word
 function displaywords() {
@@ -69,7 +69,7 @@ generateButtons();
 
 //aphabet chosen letter to appear on click
 function Guess(chosenLetter) {
-    selectedword.includes(chosenLetter) === -1 ? selectedword.push(chosenLetter) : null;
+    selectedword.includes(chosenLetter) ? console.log($,{chosenLetter}):
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
    alert(selectedword);
