@@ -1,14 +1,11 @@
-const Hangmanhead = document.getElementById("head");
-const Hangmanbody = document.getElementById("body");
-const Hangmanarms = document.getElementById("arms");
-const Hangmanlegs = document.getElementById("legs");
+let wrongCounter = 0;
 const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
+let showLives = 5;
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 
-
-let showLives = 5;
+const womanhanging = document.getElementById("manhanging")
 
 
 
@@ -57,8 +54,6 @@ onClick = "Guess('` + letter + `')" > ` + letter + ` </button>`)
 generateButtons();
 
 
-
-
 //aphabet chosen letter to appear on click
 function Guess(chosenLetter) {
     selectedword.includes(chosenLetter) ? console.log($, { chosenLetter }) :
@@ -69,18 +64,11 @@ function Guess(chosenLetter) {
         correctLetters.push(chosenLetter);
 
         displaywords();
+        //svg to appear on failure
     } else {
-        if (!wrongLetters.includes(chosenLetter)) {
-            wrongLetters.push(chosenLetter);
-            wrongLettersEl();
-        }
+        wrongLetters = wrongCounter + 1;
+        womanhanging.src = wrongCounter + '.svg';
+        womanhanging.style.display = "block";
     }
 
 }
-
-
-
-//document.getElementById(".livesleft");
-
-
-//var HangmanParts = [$("#head"), $("#body"), $("#arms"), $("#legs")];}
