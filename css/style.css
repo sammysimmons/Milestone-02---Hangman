@@ -14,12 +14,12 @@ html {
     display: none;
     position: absolute;
     top: 190px;
-    padding-left: 60px;
+    padding-left: 130px;
 }
 
 line {
     stroke: ivory;
-    stroke-width: 4;
+    stroke-width: 10;
     stroke-linecap: round;
 }
 
