@@ -12,6 +12,30 @@
         display: none;
     }
     
+    #head {
+        position: absolute;
+        top: 190px;
+        padding-left: 60px;
+    }
+    
+    #body {
+        position: absolute;
+        top: 190px;
+        padding-left: 60px;
+    }
+    
+    #arms {
+        position: absolute;
+        top: 190px;
+        padding-left: 60px;
+    }
+    
+    #legs {
+        position: absolute;
+        top: 190px;
+        padding-left: 60px;
+    }
+    
     line {
         stroke: ivory;
         stroke-width: 4;
