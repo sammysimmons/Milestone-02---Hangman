@@ -64,11 +64,13 @@ function Guess(chosenLetter) {
         correctLetters.push(chosenLetter);
 
         displaywords();
+
         //svg to appear on failure
     } else {
-        wrongLetters = wrongCounter + 1;
+        wrongCounter += 1;
         womanhanging.src = wrongCounter + '.svg';
-        womanhanging.style.display = "block";
+        console.log(womanhanging.src)
+        document.getElementById(wrongCounter)
     }
 
 }
