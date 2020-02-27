@@ -30,15 +30,12 @@ let wrongLetters = [];
 
 //display hidden word
 function displaywords() {
-    wordsEl.innerHTML = `${selectedword
-        .split('').map(letter => ` 
-             <div class="letters">
-        ${correctLetters.includes(letter) ? letter : '_'}
-</div>`)
-//no commas
-.join('')}
-`;
-//document.getElementById("words").innerHTML = selectedword;
+    wordsEl.innerHTML =
+        selectedword
+        .split('').map(letter => `<div class="letters">${correctLetters.includes(letter) ? letter : '_'}</div>`)
+        //no commas
+        .join('');
+    //document.getElementById("words").innerHTML = selectedword;
 }
 
 displaywords();
@@ -47,20 +44,15 @@ displaywords();
 
 //aphabet letter buttons
 function generateButtons() {
-        let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
-          `
-            <button
-              class="alphabetbuttons"
-              id='` + letter + `'
-              onClick="Guess('` + letter + `')"
-            >
-              ` + letter + `
-            </button>
-          `).join('');
-      
-        document.getElementById('alphabtn').innerHTML = buttonsHTML;
-      }
-      
+    let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
+            `<button class = "alphabetbuttons"
+id = '` + letter + `' 
+onClick = "Guess('` + letter + `')" > ` + letter + ` </button>`)
+        .join('');
+
+    document.getElementById('alphabtn').innerHTML = buttonsHTML;
+}
+
 
 generateButtons();
 
@@ -69,19 +61,22 @@ generateButtons();
 
 //aphabet chosen letter to appear on click
 function Guess(chosenLetter) {
-    selectedword.includes(chosenLetter) ? console.log($,{chosenLetter}):
-    document.getElementById(chosenLetter).setAttribute('disabled', true);
+    selectedword.includes(chosenLetter) ? console.log($, { chosenLetter }) :
+        document.getElementById(chosenLetter).setAttribute('disabled', true);
 
-   //alert(selectedword);
-    if (selectedword.includes(chosenLetter)){
-        if (!correctLetters.includes(chosenLetter)){
-            correctLetters.push(chosenLetter);
-        }
+    //alert(selectedword);
+    if (selectedword.includes(chosenLetter)) {
+        correctLetters.push(chosenLetter);
+
         displaywords();
-    } 
-    
-}
+    } else {
+        if (!wrongLetters.includes(chosenLetter)) {
+            wrongLetters.push(chosenLetter);
+            wrongLettersEl();
+        }
+    }
 
+}
 
 
 
