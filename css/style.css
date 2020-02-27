@@ -7,9 +7,10 @@
         overflow-x: hidden;
     }
     /*hangman*/
-    /*.manhanging {
+    
+    .manhanging {
         display: none;
-    }*/
+    }
     
     line {
         stroke: ivory;
@@ -115,7 +116,7 @@
         margin: 3px;
         border: green;
         display: inline-block;
-        background-color: ivory;
+        background-color: rgb(128, 124, 0);
     }
     
     x .playbtn {
