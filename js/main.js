@@ -47,7 +47,7 @@ displaywords();
 
 //aphabet letter buttons
 function generateButtons() {
-        let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXyYZ'.split('').map(letter =>
+        let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
           `
             <button
               class="alphabetbuttons"
@@ -72,10 +72,14 @@ function Guess(chosenLetter) {
     selectedword.includes(chosenLetter) ? console.log($,{chosenLetter}):
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
-   alert(selectedword);
-    if (selectedword.includes(chosenLetter) >= 0) {
+   //alert(selectedword);
+    if (selectedword.includes(chosenLetter)){
+        if (!correctLetters.includes(chosenLetter)){
+            correctLetters.push(chosenLetter);
+        }
         displaywords();
-    }
+    } 
+    
 }
 
 
