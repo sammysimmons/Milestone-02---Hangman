@@ -1,202 +1,194 @@
-    @import url('https://fonts.googleapis.com/css?family=Lacquer|Open+Sans:300,700i&display=swap');
-    body,
-    html {
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Open+Sans:300,700i&display=swap');
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/*hangman*/
+
+#manhanging img {
+    position: absolute;
+    top: 190px;
+    padding-left: 60px;
+}
+
+line {
+    stroke: ivory;
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+
+/*text*/
+
+#words {
+    padding-left: 10px;
+    position: absolute;
+    display: flex;
+    color: ivory;
+    font-family: OpenSans;
+    top: 420px;
+}
+
+.letters {
+    padding-left: 2px;
+    margin: 0 6px;
+    letter-spacing: 10px;
+    font-size: 34px;
+    height: 40px;
+    width: 20px;
+}
+
+.livesleft {
+    color: ivory;
+    position: absolute;
+    top: 160px;
+    right: 20px;
+}
+
+.newGame {
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    color: ivory;
+}
+
+.game-intro {
+    color: ivory;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 480px;
+    font-family: Lacquer;
+    font-size: 46px;
+}
+
+.instructions {
+    margin-top: 0px;
+    flex-direction: column;
+    text-align: center;
+    color: ivory;
+    font-family: OpenSans;
+    font-size: 18px;
+}
+
+.game-welcome {
+    color: ivory;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Lacquer;
+    font-size: 28px;
+}
+
+
+/*pop-up*/
+
+#newGame {
+    display: none;
+    width: 60%;
+}
+
+.newGame {
+    font-family: Lacquer;
+    font-size: 16px;
+    background-color: rgb(93, 0, 174, 0.6);
+    align-content: center;
+    margin-top: -200px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+#newGamebtn {
+    font-family: OpenSans;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*buttons*/
+
+#alphabtn {
+    text-align: center;
+    align-items: center;
+}
+
+.alphabetbuttons {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 3px;
+    border: green;
+    display: inline-block;
+    background-color: rgb(128, 124, 0);
+}
+
+x .playbtn {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 6);
+    padding: 20px 80px;
+    font-size: 22px;
+    display: inline-block;
+}
+
+.playbtn:hover {
+    background-color: ghostwhite;
+}
+
+
+/*imagery*/
+
+.background {
+    height: 900px;
+    width: 100%;
+    background: url("../images/landing-background-desktop.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* mobile styling*/
+
+@media (max-width: 768px) {
+    .background {
         height: 100%;
-        width: 100%;
-        margin: 0;
-        overflow-x: hidden;
+        overflow: hidden;
+        background: url("../images/game-background-mobile.jpg") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
     }
-    /*hangman*/
-    
-    .manhanging {
-        display: none;
-    }
-    
-    #head {
-        position: absolute;
-        top: 190px;
-        padding-left: 60px;
-    }
-    
-    #body {
-        position: absolute;
-        top: 190px;
-        padding-left: 60px;
-    }
-    
-    #arms {
-        position: absolute;
-        top: 190px;
-        padding-left: 60px;
-    }
-    
-    #legs {
-        position: absolute;
-        top: 190px;
-        padding-left: 60px;
-    }
-    
-    line {
-        stroke: ivory;
-        stroke-width: 4;
-        stroke-linecap: round;
-    }
-    /*text*/
-    
-    #words {
-        padding-left: 10px;
-        position: absolute;
-        display: flex;
-        color: ivory;
-        font-family: OpenSans;
-        top: 420px;
-    }
-    
-    .letters {
-        padding-left: 2px;
-        margin: 0 6px;
-        letter-spacing: 10px;
-        font-size: 34px;
-        height: 40px;
-        width: 20px;
-    }
-    
-    .livesleft {
-        color: ivory;
-        position: absolute;
-        top: 160px;
-        right: 20px;
-    }
-    
-    .newGame {
-        padding-top: 20px;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin: auto;
-        color: ivory;
-    }
-    
     .game-intro {
         color: ivory;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 480px;
+        text-align: center;
+        margin-top: 300px;
         font-family: Lacquer;
-        font-size: 46px;
+        font-size: 26px;
     }
-    
     .instructions {
         margin-top: 0px;
-        flex-direction: column;
         text-align: center;
         color: ivory;
         font-family: OpenSans;
         font-size: 18px;
     }
-    
-    .game-welcome {
-        color: ivory;
-        flex-direction: column;
+    .playbtn {
+        border: none;
         text-align: center;
-        margin-top: 50px;
-        font-family: Lacquer;
-        font-size: 28px;
-    }
-    /*pop-up*/
-    
-    #newGame {
-        display: none;
-        width: 60%;
-    }
-    
-    .newGame {
-        font-family: Lacquer;
-        font-size: 16px;
-        background-color: rgb(93, 0, 174, 0.6);
-        align-content: center;
-        margin-top: -200px;
-        padding-bottom: 40px;
-        border-radius: 5px;
-    }
-    
-    #newGamebtn {
-        font-family: OpenSans;
-        font-size: 16px;
-        background-color: rgb(255, 255, 255);
-    }
-    /*buttons*/
-    
-    #alphabtn {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .alphabetbuttons {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        margin: 3px;
-        border: green;
-        display: inline-block;
-        background-color: rgb(128, 124, 0);
-    }
-    
-    x .playbtn {
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(255, 255, 6);
-        padding: 20px 80px;
+        background-color: greenyellow;
+        padding: 20px 60px;
         font-size: 22px;
         display: inline-block;
+        margin-left: 115px;
+        margin-top: 0em;
     }
-    
-    .playbtn:hover {
-        background-color: ghostwhite;
-    }
-    /*imagery*/
-    
-    .background {
-        height: 900px;
-        width: 100%;
-        background: url("../images/landing-background-desktop.jpg") no-repeat center center;
-        background-size: cover;
-        overflow: hidden;
-    }
-    /* mobile styling*/
-    
-    @media (max-width: 768px) {
-        .background {
-            height: 100%;
-            overflow: hidden;
-            background: url("../images/game-background-mobile.jpg") no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        .game-intro {
-            color: ivory;
-            text-align: center;
-            margin-top: 300px;
-            font-family: Lacquer;
-            font-size: 26px;
-        }
-        .instructions {
-            margin-top: 0px;
-            text-align: center;
-            color: ivory;
-            font-family: OpenSans;
-            font-size: 18px;
-        }
-        .playbtn {
-            border: none;
-            text-align: center;
-            background-color: greenyellow;
-            padding: 20px 60px;
-            font-size: 22px;
-            display: inline-block;
-            margin-left: 115px;
-            margin-top: 0em;
-        }
-    }
-    /* gaming page*/
+}
+
+
+/* gaming page*/
