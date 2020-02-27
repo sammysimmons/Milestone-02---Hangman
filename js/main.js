@@ -5,7 +5,7 @@ let showLives = 5;
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 const womanhanging = document.getElementById("manhanging");
-const bodyParts = document.getElementById(wrongCounter + 'svg');
+
 
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
 
@@ -71,10 +71,14 @@ function Guess(chosenLetter) {
         wrongCounter += 1;
         womanhanging.src = wrongCounter + '.svg';
         console.log(womanhanging.src)
+        const bodyParts = document.getElementById(wrongCounter + 'svg');
+        bodyParts.style.display = "block";
 
         document.getElementById(wrongCounter)
         console.log(bodyParts);
         console.log(HangmanParts);
+
+
     }
 
 }
