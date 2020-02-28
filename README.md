@@ -31,10 +31,10 @@ you can play with any device, by clicking the button elements, as most devices a
 
 All tests have been run manually through the console in google chrome. I have also utilising the debugger; on the lines the errors are appearing in the try and break down these errors further.
 
-issue 01 - was getting the alphabet buttons to interact, i firstly built these into the html, but then after researching discovered this is not classed as best practice as you will have to duplicate instructions across each button which can get a little messy. 
+issue 01 - was getting the alphabet buttons to interact, i firstly built these into the html, but then after researching discovered this is not classed as best practice as you will have to duplicate instructions across each button which can get a little messy.
 
 ## Credits
 
 ### Acknowledgement
 
-https://www.youtube.com/watch?v=AX7uybwukkk
+<!--https://www.youtube.com/watch?v=AX7uybwukkk
