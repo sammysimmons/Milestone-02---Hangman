@@ -6,6 +6,7 @@ const wrongLettersEl = document.getElementById("letters");
 const womanhanging = document.getElementById("manhanging");
 
 
+
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
 
 
@@ -76,25 +77,23 @@ function Guess(chosenLetter) {
         document.getElementById(wrongCounter)
         console.log(bodyParts);
         console.log(HangmanParts);
+
         Gamewon();
-        //GameLost();
+
 
     }
 
 }
 
-//console.log("selectedword :", selectedword);
-//console.log("WordsEl.innerHTML :", wordsEl.innerHTML);
-
-var L = [A, B, C, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
-var count = 0;
-
 function Gamewon() {
-    for (var i = 0; i < L.length; i++) {
-        if (L[i] === selectedword) {
-            count++;
-            document.getElementById('newGame');
-            newgamepop.style.display = "block";
-        }
+    console.log("correctLetters :", correctLetters);
+    if (correctLetters.length === correctLetters.length) {
+        document.getElementById('newGame');
+        newgamepop.style.display = "block";
+    } else {
+        bodyParts = +4;
+        const GameLost = document.getElementById('GameOver');
+        GameLost.style.display = "block";
+
     }
 }
