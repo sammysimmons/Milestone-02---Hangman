@@ -27,6 +27,10 @@ Once you have selected a letter this letter then disables, so you cannot reselec
 
 you can play with any device, by clicking the button elements, as most devices are now touch screen i have designed that with this in mind.
 
+## additional features i would like to implement
+
+Keyboard function so you dont have to reply on clicking on the buttons, this would make the game more user friendly across all devices.
+
 ## Testing
 
 All tests have been run manually through the console in google chrome. I have also utilising the debugger; on the lines the errors are appearing in the try and break down these errors further.
