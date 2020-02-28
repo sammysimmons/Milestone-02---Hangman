@@ -1,5 +1,4 @@
 let wrongCounter = 0;
-const playagain = document.getElementById("newGamebtn");
 const newgamepop = document.getElementById("newGame");
 let showLives = 5;
 const wordsEl = document.getElementById("words");
@@ -8,6 +7,7 @@ const womanhanging = document.getElementById("manhanging");
 
 
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
+
 
 
 
@@ -28,8 +28,7 @@ let wrongLetters = [];
 
 //display hidden word
 function displaywords() {
-    wordsEl.innerHTML =
-        selectedword
+    wordsEl.innerHTML = selectedword
         .split('').map(letter => `<div class="letters">${correctLetters.includes(letter) ? letter : '_'}</div>`)
         //no commas
         .join('');
@@ -77,7 +76,18 @@ function Guess(chosenLetter) {
         document.getElementById(wrongCounter)
         console.log(bodyParts);
         console.log(HangmanParts);
+        Gamewon();
+        //GameLost();
 
     }
 
+}
+
+function Gamewon() {
+    console.log("selectedword :", selectedword);
+    console.log("WordsEl.innerHTML :", wordsEl.innerHTML);
+    if (WordsEl.innerHTML === selectedword) {
+        document.getElementById('newGame');
+        newgamepop.style.display = "block";
+    }
 }
