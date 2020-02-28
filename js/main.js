@@ -83,11 +83,18 @@ function Guess(chosenLetter) {
 
 }
 
+//console.log("selectedword :", selectedword);
+//console.log("WordsEl.innerHTML :", wordsEl.innerHTML);
+
+var L = [A, B, C, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
+var count = 0;
+
 function Gamewon() {
-    console.log("selectedword :", selectedword);
-    console.log("WordsEl.innerHTML :", wordsEl.innerHTML);
-    if (WordsEl.innerHTML === selectedword) {
-        document.getElementById('newGame');
-        newgamepop.style.display = "block";
+    for (var i = 0; i < L.length; i++) {
+        if (L[i] === selectedword) {
+            count++;
+            document.getElementById('newGame');
+            newgamepop.style.display = "block";
+        }
     }
 }
