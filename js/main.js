@@ -4,7 +4,7 @@ let showLives = 5;
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 const womanhanging = document.getElementById("manhanging");
-
+const Over = document.getElementById('GameOver')
 
 
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
@@ -62,7 +62,9 @@ function Guess(chosenLetter) {
 
     //alert(selectedword);
     if (selectedword.includes(chosenLetter)) {
+        //ToDo make this push correct amount of times
         correctLetters.push(chosenLetter);
+
 
         displaywords();
 
@@ -78,22 +80,12 @@ function Guess(chosenLetter) {
         console.log(bodyParts);
         console.log(HangmanParts);
 
-        Gamewon();
-
 
     }
-
-}
-
-function Gamewon() {
-    console.log("correctLetters :", correctLetters);
-    if (correctLetters.length === correctLetters.length) {
-        document.getElementById('newGame');
+    if (correctLetters.length === selectedword.length) {
         newgamepop.style.display = "block";
-    } else {
-        bodyParts = +4;
-        const GameLost = document.getElementById('GameOver');
-        GameLost.style.display = "block";
-
+    }
+    if (wrongCounter === 4) {
+        Over.style.display = "block";
     }
 }
