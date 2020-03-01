@@ -93,15 +93,16 @@ line {
 
 #newGame {
     display: none;
-    width: 80%;
+    width: 60%;
 }
 
 .newGame {
+    position: absolute;
     font-family: Lacquer;
     font-size: 16px;
-    background-color: rgb(93, 0, 174, 0.6);
+    background-color: rgb(93, 0, 174);
     align-content: center;
-    margin-top: -200px;
+    margin-top: -300px;
     padding-bottom: 40px;
     border-radius: 5px;
 }
@@ -118,19 +119,22 @@ line {
 }
 
 .GameOver {
+    position: relative;
     font-family: Lacquer;
     font-size: 16px;
     background-color: red;
     align-content: center;
-    margin-top: -200px;
-    padding-bottom: 40px;
-    border-radius: 5px;
+    margin-top: -300px;
+    padding: 30px;
+    border-radius: 50px;
 }
 
 #GameOverbtn {
     font-family: OpenSans;
     font-size: 16px;
     background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
 }
 
 
