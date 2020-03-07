@@ -8,40 +8,76 @@ html {
 }
 
 
-/*hangman*/
+/*hangman desktop */
 
 #manhanging img {
     display: none;
     position: absolute;
-    top: 190px;
-    padding-left: 130px;
+    top: 330px;
+    padding-left: 660px;
 }
 
-line {
-    stroke: ivory;
-    stroke-width: 10;
-    stroke-linecap: round;
+#manframe {
+    position: absolute;
+    top: 310px;
+    padding-left: 600px;
 }
 
 
 /*text*/
 
 #words {
-    padding-left: 10px;
+    padding-left: 600px;
     position: absolute;
     display: flex;
     color: ivory;
     font-family: OpenSans;
-    top: 420px;
+    top: 620px;
 }
 
 .letters {
     padding-left: 2px;
     margin: 0 6px;
     letter-spacing: 10px;
-    font-size: 34px;
+    font-size: 44px;
     height: 40px;
-    width: 20px;
+    width: 30px;
+}
+
+
+/*hangman mobile */
+
+@media (max-width: 768px) {
+    #manframe {
+        display: none;
+    }
+    #manhanging img {
+        display: none;
+        position: absolute;
+        top: 190px;
+        padding-left: 130px;
+    }
+    line {
+        stroke: ivory;
+        stroke-width: 10;
+        stroke-linecap: round;
+    }
+    /*text*/
+    #words {
+        padding-left: 30px;
+        display: flex;
+        color: ivory;
+        font-family: OpenSans;
+        top: 500px;
+    }
+    .letters {
+        padding-left: 2px;
+        margin: 0 6px;
+        letter-spacing: 10px;
+        font-size: 34px;
+        height: 40px;
+        width: 20px;
+    }
 }
 
 .livesleft {
@@ -65,9 +101,12 @@ line {
     color: ivory;
     flex-direction: column;
     align-items: center;
-    margin-top: 480px;
+    margin-top: 440px;
     font-family: Lacquer;
     font-size: 46px;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .instructions {
@@ -189,7 +228,7 @@ line {
 }
 
 
-/*buttons*/
+/*buttons desktop layout*/
 
 #alphabtn {
     text-align: center;
@@ -197,27 +236,59 @@ line {
 }
 
 .alphabetbuttons {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 5px;
+    margin-top: 220px;
     border: green;
     display: inline-block;
     background-color: rgb(128, 124, 0);
 }
 
 .playbtn {
-    flex-direction: column;
-    align-items: center;
+    display: inline;
+    margin-left: 720px;
     background-color: rgb(255, 255, 6);
     padding: 20px 80px;
     font-size: 22px;
-    display: inline-block;
 }
 
 .playbtn:hover {
     background-color: ghostwhite;
+}
+
+
+/*buttons mobile layout*/
+
+@media (max-width: 768px) {
+    #alphabtn {
+        text-align: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+    .alphabetbuttons {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin: 3px;
+        border: green;
+        display: inline-block;
+        background-color: rgb(128, 124, 0);
+    }
+    .playbtn {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 255, 6);
+        padding: 20px 80px;
+        font-size: 22px;
+        display: inline-block;
+    }
+    .playbtn:hover {
+        background-color: ghostwhite;
+    }
 }
 
 
@@ -226,9 +297,17 @@ line {
 .background {
     height: 100%;
     width: 100%;
-    background: url("../images/landing-background-desktop.jpg") no-repeat center center;
+    background: url("../images/landing-background-desktop-01.jpg") no-repeat center center;
     background-size: cover;
     overflow: hidden;
+}
+
+.backgroundGame {
+    height: 100%;
+    overflow: hidden;
+    background: url("../images/landing-background-desktop-01.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -238,6 +317,13 @@ line {
     .background {
         height: 100%;
         overflow: hidden;
+        background: url("../images/landing-background-mobile.jpg") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .backgroundGame {
+        height: 100%;
+        overflow: hidden;
         background: url("../images/game-background-mobile.jpg") no-repeat center center;
         background-size: cover;
         background-attachment: fixed;
@@ -245,16 +331,16 @@ line {
     .game-intro {
         color: ivory;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 380px;
         font-family: Lacquer;
         font-size: 26px;
+        margin-bottom: 3px;
     }
     .instructions {
-        margin-top: 0px;
         text-align: center;
         color: ivory;
         font-family: OpenSans;
-        font-size: 18px;
+        font-size: 15px;
     }
     .playbtn {
         border: none;
@@ -263,7 +349,7 @@ line {
         padding: 20px 60px;
         font-size: 22px;
         display: inline-block;
-        margin-left: 115px;
+        margin-left: 125px;
         margin-top: 0em;
     }
 }
