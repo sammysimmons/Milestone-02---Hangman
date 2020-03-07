@@ -1,11 +1,11 @@
 let wrongCounter = 0;
 const newgamepop = document.getElementById("newGame");
-let showLives = 5;
+//let showLives = 5;
 const wordsEl = document.getElementById("words");
 const wrongLettersEl = document.getElementById("letters");
 const womanhanging = document.getElementById("manhanging");
 const Over = document.getElementById('GameOver')
-
+let matches = 0;
 
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
 
@@ -16,7 +16,7 @@ var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
 
 
 // array of chosen words
-const words = ["JAVASCRIPT", "PROGRAM", "DEVELOPER", "DEVELOPER", "JSON", "RUBY", "PYTHON", ];
+const words = ["JAVASCRIPT", "PROGRAM", "DEVELOPER", "DEVELOP", "JSON", "RUBY", "PYTHON", ];
 
 let selectedword = words[Math.floor(Math.random() * words.length)];
 console.log(selectedword);
@@ -68,7 +68,7 @@ function Guess(chosenLetter) {
 
         displaywords();
 
-        //svg to appear on failure
+        //svg to appear on failure pop ups also to appear 
     } else {
         wrongCounter += 1;
         womanhanging.src = wrongCounter + '.svg';
@@ -89,3 +89,12 @@ function Guess(chosenLetter) {
         Over.style.display = "block";
     }
 }
+
+//to fix multiple letters in one word appearing
+function countMatches(selectedword, chosenLetter) {
+    let matches = 0;
+    selectedword.split('').forEach(function(letter) { if (letter === chosenLetter) { matches++ } });
+    return matches;
+}
+
+countMatches();
