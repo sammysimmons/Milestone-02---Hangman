@@ -31,6 +31,10 @@ you can play with any device, by clicking the button elements, as most devices a
 
 Keyboard function so you dont have to reply on clicking on the buttons, this would make the game more user friendly across all devices.
 
+Implement a lives counting functions, to tally up the lives you use.
+
+A clue button, inwhich you can request a hint to the selectedword.
+
 ## Testing
 
 All tests have been run manually through the console in google chrome. I have also utilising the debugger; on the lines the errors are appearing in the try and break down these errors further.
