@@ -93,48 +93,99 @@ line {
 
 #newGame {
     display: none;
-    width: 60%;
+    width: 80%;
+    align-items: center;
 }
 
 .newGame {
-    position: absolute;
-    font-family: Lacquer;
-    font-size: 16px;
+    position: relative;
     background-color: rgb(93, 0, 174);
-    align-content: center;
     margin-top: -300px;
-    padding-bottom: 40px;
-    border-radius: 5px;
+    padding: 30px;
+    border-radius: 50px;
 }
 
 #newGamebtn {
     font-family: OpenSans;
     font-size: 16px;
     background-color: rgb(255, 255, 255);
+    margin-left: 100px;
 }
 
 #GameOver {
     display: none;
     width: 80%;
+    align-items: center;
 }
 
 .GameOver {
     position: relative;
-    font-family: Lacquer;
-    font-size: 16px;
     background-color: red;
-    align-content: center;
     margin-top: -300px;
     padding: 30px;
     border-radius: 50px;
 }
 
+.wonmessage {
+    font-family: Lacquer;
+    font-size: 44px;
+    text-align: center;
+    color: rgb(255, 255, 6);
+}
+
 #GameOverbtn {
+    margin-left: 100px;
     font-family: OpenSans;
     font-size: 16px;
     background-color: rgb(255, 255, 255);
-    text-align: center;
-    align-items: center;
+}
+
+
+/*pop-up mobile*/
+
+@media (max-width: 768px) {
+    #newGame {
+        display: none;
+        width: 80%;
+        align-items: center;
+    }
+    .newGame {
+        position: relative;
+        background-color: rgb(93, 0, 174);
+        margin-top: -300px;
+        padding: 30px;
+        border-radius: 50px;
+    }
+    #newGamebtn {
+        font-family: OpenSans;
+        font-size: 16px;
+        background-color: rgb(255, 255, 255);
+        margin-left: 100px;
+    }
+    #GameOver {
+        display: none;
+        width: 80%;
+        align-items: center;
+    }
+    .GameOver {
+        position: relative;
+        background-color: red;
+        margin-top: -300px;
+        padding: 30px;
+        border-radius: 50px;
+    }
+    .wonmessage {
+        font-family: Lacquer;
+        font-size: 44px;
+        text-align: center;
+        color: rgb(255, 255, 6);
+    }
+    #GameOverbtn {
+        margin-left: 100px;
+        font-family: OpenSans;
+        font-size: 16px;
+        background-color: rgb(255, 255, 255);
+    }
 }
 
 
@@ -156,7 +207,7 @@ line {
     background-color: rgb(128, 124, 0);
 }
 
-x .playbtn {
+.playbtn {
     flex-direction: column;
     align-items: center;
     background-color: rgb(255, 255, 6);
@@ -173,7 +224,7 @@ x .playbtn {
 /*imagery*/
 
 .background {
-    height: 900px;
+    height: 100%;
     width: 100%;
     background: url("../images/landing-background-desktop.jpg") no-repeat center center;
     background-size: cover;
