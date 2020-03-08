@@ -93,8 +93,9 @@ function Guess(chosenLetter) {
 //to fix multiple letters in one word appearing
 function countMatches(selectedword, chosenLetter) {
     let matches = 0;
-    selectedword.split('').forEach(function(letter) { if (letter === chosenLetter) { matches++ } });
+    selectedword.split('').forEach(function(letter) {
+        if (letter === chosenLetter) { matches++ }
+    });
     return matches;
 }
-
-countMatches();
+console.log(matches);
