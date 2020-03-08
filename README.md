@@ -69,7 +69,13 @@ issue 03 - SVG, firstly i built this into the html, with a full hangman, however
 
 issue 04 - was getting the hanging woman svg to appear on failure which has been implemented as a "Else" on the function Guess ChosenLetter, you can see this from my comments, to implement this SVG's appearance I implemented a counter function, to register the number of incorrect attempts which result in an SVG's appearance 
 
+manual testing - 
 by checking Console.log throughout my project this helped to check if i was targeting the right element, some of these i have left in for examination purposes only.
+
+also manual testing for css styling was done through the live preview port, in visual code.
+
+### Outstanding bug - 
+outstanding bug that needs some work to it is the function, in which if a letter appears twice it recongnises the match count function. This prints to the console however the function does not seem to reconise if a chosen letter in the selected word appears more than once.
 
 ## Deployment
 
@@ -89,3 +95,4 @@ https://www.youtube.com/watch?v=AX7uybwukkk
 SVG tutorial - this helped with my understanding of building an SVG in html, as i work with graphics daily, this was quite simple to get my head around utilising x and y axis - https://www.w3schools.com/graphics/svg_intro.asp
 
 code validation - great tool for checking for syntax errors in your code https://esprima.org/demo/validate.html
+
