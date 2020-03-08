@@ -9,12 +9,6 @@ let matches = 0;
 
 var HangmanParts = [$("#svg1"), $("#svg2"), $("svg3"), $("#svg4")];
 
-
-
-
-
-
-
 // array of chosen words
 const words = ["JAVASCRIPT", "PROGRAM", "DEVELOPER", "DEVELOP", "JSON", "RUBY", "PYTHON", ];
 
@@ -38,8 +32,6 @@ function displaywords() {
 
 displaywords();
 
-
-
 //aphabet letter buttons
 function generateButtons() {
     let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
@@ -51,9 +43,7 @@ onClick = "Guess('` + letter + `')" > ` + letter + ` </button>`)
     document.getElementById('alphabtn').innerHTML = buttonsHTML;
 }
 
-
 generateButtons();
-
 
 //aphabet chosen letter to appear on click
 function Guess(chosenLetter) {
@@ -64,7 +54,6 @@ function Guess(chosenLetter) {
     if (selectedword.includes(chosenLetter)) {
         //ToDo make this push correct amount of times
         correctLetters.push(chosenLetter);
-
 
         displaywords();
 
@@ -79,7 +68,6 @@ function Guess(chosenLetter) {
         document.getElementById(wrongCounter)
         console.log(bodyParts);
         console.log(HangmanParts);
-
 
     }
     if (correctLetters.length === selectedword.length) {
